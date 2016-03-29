@@ -36,6 +36,20 @@
       </field>
     </record>
 
+    <!-- explicit search view definition -->
+    <record model="ir.ui.view" id="mfmodoo.people_search">
+      <field name="name">people search</field>
+      <field name="model">mfmodoo.people_list</field>
+      <field name="arch" type="xml">
+	      <search>
+		      <field name="surname"/>
+		      <field name="born"/>
+		      <field name="department_id"/>
+		      <field name="position_id"/>
+	      </search>
+      </field>
+    </record>
+
     <record model="ir.ui.view" id="mfmodoo.department_list">
       <field name="name">department list</field>
       <field name="model">mfmodoo.department_list</field>
