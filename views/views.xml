@@ -11,6 +11,7 @@
           <field name="second_name"/>
           <field name="born"/>
 	  <field name="department_id"/>
+	  <field name="position_id"/>
         </tree>
       </field>
     </record>
@@ -28,6 +29,7 @@
               <field name="second_name"/>
               <field name="born"/>
 	      <field name="department_id"/>
+	      <field name="position_id"/>
 	    </group>
 	  </sheet>
         </form>
@@ -52,8 +54,22 @@
 	  <sheet>
 	    <group>
               <field name="name"/>
-              <field name="description"/>
 	    </group>
+	    <notebook>
+	      <page string="Description">
+                  <field name="description"/>
+	      </page>
+	      <page string="Сотрудники"> 
+		  <field name="people_ids">
+			  <tree string="people">
+				  <field name="surname"/>
+				  <field name="name"/>
+				  <field name="second_name"/>
+				  <field name="position_id"/>
+			  </tree>
+		  </field>
+	      </page>
+            </notebook>
 	  </sheet>
         </form>
       </field>

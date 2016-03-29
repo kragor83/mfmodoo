@@ -10,12 +10,14 @@ class People_List(models.Model):
     second_name = fields.Char(string="Отчество", required=True)
     born = fields.Date(string="Дата рождения", required=True)
     department_id = fields.Many2one('mfmodoo.department_list', ondelete='restrict', string='Отдел', required=True)
+    position_id = fields.Many2one('mfmodoo.position_list', ondelete='restrict', string='Должность', required=True)
 
 class Department_List(models.Model):
     _name = 'mfmodoo.department_list'
 
     name = fields.Char(string='Название Отдела', required=True)
     description = fields.Text()
+    people_ids = fields.One2many('mfmodoo.people_list', 'department_id' string='Сотрудники')
 
 class Position_List(models.Model):
     _name = 'mfmodoo.position_list'
