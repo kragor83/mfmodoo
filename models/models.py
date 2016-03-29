@@ -16,13 +16,13 @@ class Department_List(models.Model):
     _name = 'mfmodoo.department_list'
 
     name = fields.Char(string='Название Отдела', required=True)
-    description = fields.Text()
     people_ids = fields.One2many('mfmodoo.people_list', 'department_id', string='Сотрудники')
 
 class Position_List(models.Model):
     _name = 'mfmodoo.position_list'
 
     name = fields.Char(string='Должность', required=True)
+    people_ids = fields.One2many('mfmodoo.people_list', 'position_id', string='Сотрудники')
 
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)

@@ -42,7 +42,6 @@
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="description"/>
         </tree>
       </field>
     </record>
@@ -56,9 +55,6 @@
               <field name="name"/>
 	    </group>
 	    <notebook>
-	      <page string="Description">
-                  <field name="description"/>
-	      </page>
 	      <page string="Сотрудники"> 
 		  <field name="people_ids">
 			  <tree string="people">
@@ -88,11 +84,23 @@
       <field name="name">position form</field>
       <field name="model">mfmodoo.position_list</field>
       <field name="arch" type="xml">
-        <form string="positiondepartment form">
+        <form string="position form">
 	  <sheet>
 	    <group>
               <field name="name"/>
 	    </group>
+	    <notebook>
+	      <page string="Сотрудники"> 
+		  <field name="people_ids">
+			  <tree string="people">
+				  <field name="surname"/>
+				  <field name="name"/>
+				  <field name="second_name"/>
+				  <field name="department_id"/>
+			  </tree>
+		  </field>
+	      </page>
+            </notebook>
 	  </sheet>
         </form>
       </field>
