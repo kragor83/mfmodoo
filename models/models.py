@@ -17,7 +17,7 @@ class Department_List(models.Model):
 
     name = fields.Char(string='Название Отдела', required=True)
     description = fields.Text()
-    people_ids = fields.One2many('mfmodoo.people_list', 'department_id' string='Сотрудники')
+    people_ids = fields.One2many('mfmodoo.people_list', 'department_id', string='Сотрудники')
 
 class Position_List(models.Model):
     _name = 'mfmodoo.position_list'
