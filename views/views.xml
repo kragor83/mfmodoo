@@ -87,7 +87,7 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <record model="ir.actions.act_window" id="mfmodoo.adepartment_ction_window">
+    <record model="ir.actions.act_window" id="mfmodoo.department_action_window">
       <field name="name">department window</field>
       <field name="res_model">mfmodoo.department_list</field>
       <field name="view_mode">tree,form</field>
