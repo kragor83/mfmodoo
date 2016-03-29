@@ -1,0 +1,43 @@
+<openerp>
+  <data>
+    <record model='mfmodoo.department_list' id='department1'>
+      <field name='name'>Отдел 1</field>
+    </record>
+    <record model='mfmodoo.department_list' id='department2'>
+      <field name='name'>Отдел 2</field>
+    </record>
+    <record model='mfmodoo.department_list' id='department3'>
+      <field name='name'>Отдел 3</field>
+    </record>
+    <record model='mfmodoo.department_list' id='department4'>
+      <field name='name'>Отдел 4</field>
+    </record>
+    <record model='mfmodoo.department_list' id='department5'>
+      <field name='name'>Отдел 5</field>
+    </record>
+    <record model='mfmodoo.department_list' id='department6'>
+      <field name='name'>Отдел 6</field>
+    </record>
+    <record model='mfmodoo.department_list' id='department7'>
+      <field name='name'>Отдел 7</field>
+    </record>
+    <record model='mfmodoo.position_list' id='position1'>
+      <field name='name'>Начальник отдела</field>
+    </record>
+    <record model='mfmodoo.position_list' id='position2'>
+      <field name='name'>Заместитель начальника отдела</field>
+    </record>
+    <record model='mfmodoo.position_list' id='position3'>
+      <field name='name'>Должность 3</field>
+    </record>
+    <record model='mfmodoo.position_list' id='position4'>
+      <field name='name'>Должность 4</field>
+    </record>
+    <record model='mfmodoo.position_list' id='position5'>
+      <field name='name'>Должность 5</field>
+    </record>
+    <record model='mfmodoo.position_list' id='position6'>
+      <field name='name'>Должность 6</field>
+    </record>
+  </data>
+

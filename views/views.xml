@@ -1,9 +1,9 @@
 <openerp>
   <data>
     <!-- explicit list view definition -->
-    <record model="ir.ui.view" id="mfmodoo.list">
-      <field name="name">mfmodoo list</field>
-      <field name="model">mfmodoo.mfmodoo</field>
+    <record model="ir.ui.view" id="mfmodoo.people_list">
+      <field name="name">people list</field>
+      <field name="model">mfmodoo.people_list</field>
       <field name="arch" type="xml">
         <tree>
           <field name="surname"/>
@@ -15,11 +15,11 @@
     </record>
 
     <!-- explicit form view definition -->
-    <record model="ir.ui.view" id="mfmodoo.form">
-      <field name="name">mfmodoo form</field>
-      <field name="model">mfmodoo.mfmodoo</field>
+    <record model="ir.ui.view" id="mfmodoo.people_form">
+      <field name="name">people form</field>
+      <field name="model">mfmodoo.people_list</field>
       <field name="arch" type="xml">
-        <form string="model form">
+        <form string="people form">
 	  <sheet>
 	    <group>
               <field name="surname"/>
@@ -32,10 +32,71 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="mfmodoo.department_list">
+      <field name="name">department list</field>
+      <field name="model">mfmodoo.department_list</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+        </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="mfmodoo.department_form">
+      <field name="name">department form</field>
+      <field name="model">mfmodoo.department_list</field>
+      <field name="arch" type="xml">
+        <form string="department form">
+	  <sheet>
+	    <group>
+              <field name="name"/>
+              <field name="description"/>
+	    </group>
+	  </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="mfmodoo.position_list">
+      <field name="name">position list</field>
+      <field name="model">mfmodoo.position_list</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="mfmodoo.position_form">
+      <field name="name">position form</field>
+      <field name="model">mfmodoo.position_list</field>
+      <field name="arch" type="xml">
+        <form string="positiondepartment form">
+	  <sheet>
+	    <group>
+              <field name="name"/>
+              <field name="description"/>
+	    </group>
+	  </sheet>
+        </form>
+      </field>
+    </record>
+
     <!-- actions opening views on models -->
-    <record model="ir.actions.act_window" id="mfmodoo.action_window">
-      <field name="name">mfmodoo window</field>
-      <field name="res_model">mfmodoo.mfmodoo</field>
+    <record model="ir.actions.act_window" id="mfmodoo.people_action_window">
+      <field name="name">people window</field>
+      <field name="res_model">mfmodoo.people_list</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="mfmodoo.adepartment_ction_window">
+      <field name="name">department window</field>
+      <field name="res_model">mfmodoo.department_list</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="mfmodoo.position_action_window">
+      <field name="name">position window</field>
+      <field name="res_model">mfmodoo.position_list</field>
       <field name="view_mode">tree,form</field>
     </record>
 
@@ -55,15 +116,19 @@
     -->
 
     <!-- Top menu item -->
-    <menuitem name="mfmodoo" id="mfmodoo.menu_root"/>
+    <menuitem name="База Сотрудников" id="mfmodoo.menu_root"/>
     <!-- menu categories -->
     <!--
     <menuitem name="Menu 1" id="mfmodoo.menu_1" parent="mfmodoo.menu_root"/>
     <menuitem name="Menu 2" id="mfmodoo.menu_2" parent="mfmodoo.menu_root"/>
     -->
     <!-- actions -->
-    <menuitem name="List" id="mfmodoo.menu_1_list" parent="mfmodoo.menu_root"
-              action="mfmodoo.action_window"/>
+    <menuitem name="Список сотрудников" id="mfmodoo.menu_1_list" parent="mfmodoo.menu_root"
+              action="mfmodoo.people_action_window"/>
+    <menuitem name="Отделы" id="mfmodoo.menu_1_list" parent="mfmodoo.menu_root"
+              action="mfmodoo.department_action_window"/>
+    <menuitem name="Должности" id="mfmodoo.menu_1_list" parent="mfmodoo.menu_root"
+              action="mfmodoo.position_action_window"/>
     <!--
     <menuitem name="Server to list" id="mfmodoo" parent="mfmodoo.menu_2"
               action="mfmodoo.action_server"/>
