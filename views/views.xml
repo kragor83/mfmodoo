@@ -10,6 +10,7 @@
           <field name="name"/>
           <field name="second_name"/>
           <field name="born"/>
+	  <field name="department_id"/>
         </tree>
       </field>
     </record>
@@ -26,6 +27,7 @@
               <field name="name"/>
               <field name="second_name"/>
               <field name="born"/>
+	      <field name="department_id"/>
 	    </group>
 	  </sheet>
         </form>
@@ -82,19 +84,19 @@
 
     <!-- actions opening views on models -->
     <record model="ir.actions.act_window" id="mfmodoo.people_action_window">
-      <field name="name">people window</field>
+      <field name="name">Сотрудники</field>
       <field name="res_model">mfmodoo.people_list</field>
       <field name="view_mode">tree,form</field>
     </record>
 
     <record model="ir.actions.act_window" id="mfmodoo.department_action_window">
-      <field name="name">department window</field>
+      <field name="name">Отделы</field>
       <field name="res_model">mfmodoo.department_list</field>
       <field name="view_mode">tree,form</field>
     </record>
 
     <record model="ir.actions.act_window" id="mfmodoo.position_action_window">
-      <field name="name">position window</field>
+      <field name="name">Должности</field>
       <field name="res_model">mfmodoo.position_list</field>
       <field name="view_mode">tree,form</field>
     </record>
