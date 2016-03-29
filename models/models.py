@@ -9,7 +9,7 @@ class People_List(models.Model):
     name = fields.Char(string="Имя", required=True)
     second_name = fields.Char(string="Отчество", required=True)
     born = fields.Date(string="Дата рождения", required=True)
-    department_id = fields.Many2One('mfmodoo.department_list', ondelete='restrict', string='Отдел', required=True)
+    department_id = fields.Many2one('mfmodoo.department_list', ondelete='restrict', string='Отдел', required=True)
 
 class Department_List(models.Model):
     _name = 'mfmodoo.department_list'
