@@ -5,7 +5,7 @@ from openerp import models, fields
 class People_List(models.Model):
     _name = 'mfmodoo.people_list'
 
-    surname = fields.Char(string="Фамилия", required=True)
+    name = fields.Char(string="Фамилия", required=True)
     first_name = fields.Char(string="Имя", required=True)
     second_name = fields.Char(string="Отчество", required=True)
     born = fields.Date(string="Дата рождения", required=True)

@@ -6,7 +6,7 @@
       <field name="model">mfmodoo.people_list</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="surname"/>
+          <field name="name"/>
           <field name="first_name"/>
           <field name="second_name"/>
           <field name="born"/>
@@ -24,7 +24,7 @@
         <form string="people form">
 	  <sheet>
 	    <group>
-              <field name="surname"/>
+              <field name="name"/>
               <field name="first_name"/>
               <field name="second_name"/>
               <field name="born"/>
@@ -42,7 +42,7 @@
       <field name="model">mfmodoo.people_list</field>
       <field name="arch" type="xml">
 	      <search>
-		      <field name="surname"/>
+		      <field name="name"/>
 		      <field name="born"/>
 		      <field name="department_id"/>
 		      <field name="position_id"/>
@@ -72,7 +72,7 @@
 	      <page string="Сотрудники"> 
 		  <field name="people_ids">
 			  <tree string="people">
-				  <field name="surname"/>
+				  <field name="name"/>
 				  <field name="first_name"/>
 				  <field name="second_name"/>
 				  <field name="position_id"/>
@@ -107,7 +107,7 @@
 	      <page string="Сотрудники"> 
 		  <field name="people_ids">
 			  <tree string="people">
-				  <field name="surname"/>
+				  <field name="name"/>
 				  <field name="first_name"/>
 				  <field name="second_name"/>
 				  <field name="department_id"/>
