@@ -141,6 +141,7 @@
 
     <!-- server action to the one above -->
     <!--
+    -->
     <record model="ir.actions.server" id="mfmodoo.action_server">
       <field name="name">mfmodoo server</field>
       <field name="model_id" ref="model_mfmodoo_mfmodoo"/>
@@ -152,7 +153,6 @@
         }
       </field>
     </record>
-    -->
 
     <!-- Top menu item -->
     <menuitem name="База Сотрудников" id="mfmodoo.menu_root"/>
@@ -169,8 +169,8 @@
     <menuitem name="Должности" id="mfmodoo.menu_3_list" parent="mfmodoo.menu_root"
               action="mfmodoo.position_action_window"/>
     <!--
-    <menuitem name="Server to list" id="mfmodoo" parent="mfmodoo.menu_2"
-              action="mfmodoo.action_server"/>
     -->
+    <menuitem name="Server to list" id="mfmodoo" parent="mfmodoo.menu_root"
+              action="mfmodoo.action_server"/>
   </data>
 </openerp>
