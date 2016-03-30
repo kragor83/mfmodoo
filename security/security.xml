@@ -1,7 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-	    <record id="mfmodoo_manager" model="res.groups">
-		    <field name="name">База Сотрудников</field>
-	    </record>
+        <record id="mfmodoo_manager" model="res.groups">
+            <field name="name">База Сотрудников</field>
+        </record>
     </data>
 </openerp>
