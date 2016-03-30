@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_mfmodoo_mfmodoo,mfmodoo.mfmodoo,model_mfmodoo_mfmodoo,,1,0,0,0
+access_people_mfmodoo,mfmodoo.people_list,model_mfmodoo_people,mfmodoo_manager,1,1,1,0
+access_department_mfmodoo,mfmodoo.department_list,model_mfmodoo_department,mfmodoo_manager,1,1,1,0
+access_position_mfmodoo,mfmodoo.position_list,model_mfmodoo_position,mfmodoo_manager,1,1,1,0
