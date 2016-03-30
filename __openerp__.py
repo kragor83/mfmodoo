@@ -28,8 +28,8 @@
     'data': [
         'views/views.xml',
         'data.xml',
-        'security/ir.model.access.csv',
         'security/security.xml',
+        'security/ir.model.access.csv',
         #'views/templates.xml',
     ],
     # only loaded in demonstration mode
