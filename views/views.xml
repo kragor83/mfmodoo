@@ -7,7 +7,7 @@
       <field name="arch" type="xml">
         <tree>
           <field name="surname"/>
-          <field name="name"/>
+          <field name="first_name"/>
           <field name="second_name"/>
           <field name="born"/>
 	  <field name="department_id"/>
@@ -25,7 +25,7 @@
 	  <sheet>
 	    <group>
               <field name="surname"/>
-              <field name="name"/>
+              <field name="first_name"/>
               <field name="second_name"/>
               <field name="born"/>
 	      <field name="department_id"/>
@@ -73,7 +73,7 @@
 		  <field name="people_ids">
 			  <tree string="people">
 				  <field name="surname"/>
-				  <field name="name"/>
+				  <field name="first_name"/>
 				  <field name="second_name"/>
 				  <field name="position_id"/>
 			  </tree>
@@ -108,7 +108,7 @@
 		  <field name="people_ids">
 			  <tree string="people">
 				  <field name="surname"/>
-				  <field name="name"/>
+				  <field name="first_name"/>
 				  <field name="second_name"/>
 				  <field name="department_id"/>
 			  </tree>
@@ -139,28 +139,8 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="mfmodoo.action_server">
-      <field name="name">mfmodoo server</field>
-      <field name="model_id" ref="model_mfmodoo_mfmodoo"/>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
-
     <!-- Top menu item -->
     <menuitem name="База Сотрудников" id="mfmodoo.menu_root"/>
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="mfmodoo.menu_1" parent="mfmodoo.menu_root"/>
-    <menuitem name="Menu 2" id="mfmodoo.menu_2" parent="mfmodoo.menu_root"/>
-    -->
     <!-- actions -->
     <menuitem name="Список сотрудников" id="mfmodoo.menu_1_list" parent="mfmodoo.menu_root"
               action="mfmodoo.people_action_window"/>
@@ -168,9 +148,5 @@
               action="mfmodoo.department_action_window"/>
     <menuitem name="Должности" id="mfmodoo.menu_3_list" parent="mfmodoo.menu_root"
               action="mfmodoo.position_action_window"/>
-    <!--
-    <menuitem name="Server to list" id="mfmodoo" parent="mfmodoo.menu_root"
-              action="mfmodoo.action_server"/>
-    -->
   </data>
 </openerp>

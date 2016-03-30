@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from openerp import models, fields, api
+from openerp import models, fields
 
 class People_List(models.Model):
     _name = 'mfmodoo.people_list'
 
     surname = fields.Char(string="Фамилия", required=True)
-    name = fields.Char(string="Имя", required=True)
+    first_name = fields.Char(string="Имя", required=True)
     second_name = fields.Char(string="Отчество", required=True)
     born = fields.Date(string="Дата рождения", required=True)
     department_id = fields.Many2one('mfmodoo.department_list', ondelete='restrict', string='Отдел', required=True)
@@ -23,11 +23,3 @@ class Position_List(models.Model):
 
     name = fields.Char(string='Должность', required=True)
     people_ids = fields.One2many('mfmodoo.people_list', 'position_id', string='Сотрудники')
-
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100
