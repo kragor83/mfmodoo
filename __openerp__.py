@@ -5,7 +5,7 @@
     База сотрудников написанная в качестве тестового задания
     """,
 
-    'author': "My Company",
+    'author': "Maksim Krasnov",
     'website': "http://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
